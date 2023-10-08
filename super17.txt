@@ -1,0 +1,12 @@
+echo "Enter username:"
+read u
+x=`who|grep -c "$u"`
+if [ $x -eq 0 ]
+then
+echo "$u user not present."
+else
+echo "$u user present....please save your work....system will shut down in some
+time"
+sleep 5
+shut down -h 0
+fi
